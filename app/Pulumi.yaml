@@ -2,5 +2,5 @@ name: pulumi-playground
 runtime:
   name: python
   options:
-    virtualenv: venv
+    virtualenv: .venv
 description: A minimal AWS Python Pulumi program

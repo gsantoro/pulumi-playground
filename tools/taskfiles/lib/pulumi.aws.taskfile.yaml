@@ -13,4 +13,5 @@ tasks:
     cmds:
       - pulumi new aws-python --force
       - pulumi config set aws:project {{.PROJECT_ID}}
+      - pulumi config set aws:region us-west-2
       # https://blog.bringhurst.org/packaging-pulumi-with-poetry

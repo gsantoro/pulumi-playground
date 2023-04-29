@@ -4,29 +4,29 @@ version: '3'
 
 tasks:
   init:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.WORKING_DIR}}'
     description: Creates a Pulumi.localstack.yaml already configured with all the localstack endpoints
     cmds:
       - pulumilocal init
 
   up:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.WORKING_DIR}}'
     cmds:
       - pulumilocal up
 
   down:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.WORKING_DIR}}'
     cmds:
       - pulumi destroy
       - pulumi stack rm
 
   output:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.WORKING_DIR}}'
     cmds:
       - pulumi stack output bucket_name
       - pulumi stack output bucket_endpoint
 
   list:
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.WORKING_DIR}}'
     cmds:
       - gsutil ls $(pulumi stack output bucket_name)

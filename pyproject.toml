@@ -13,7 +13,6 @@ awscli-local = "^0.20"
 awscli = "^1.27.123"
 pulumi-local = "^0.6"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
