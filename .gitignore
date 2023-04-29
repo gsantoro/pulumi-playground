@@ -50,6 +50,9 @@
 go.work
 
 
+# Python
+.venv
+
 ## Personal changes
 .vscode/
 build
