@@ -1,0 +1,21 @@
+version: '3'
+
+### IMPORTANT NOTE: only import via inline definition. 
+# do NOT use the following definition otherwise you won't be able to overwrite global variables
+#
+includes:
+  # NOTE: How to use it. 
+  # All the taskfiles under `tools/taskfiles/lib` are automatically downloaded from the `gsantoro/automation` repo
+  # thanks to the taskfile `automation`. If those taskfiles are not there yet, follow these steps
+  # 1. Comment out all the taskfiles with paths that start with `tools/taskfiles/lib`
+  # 2. Run `task automation`
+  # 3. Uncomment all the taskfiles with paths that start with `tools/taskfiles/lib`
+  #
+  # For this to work you need to have a .env.private with `GITHUB_TOKEN`.
+  # This file is not under git since it contain secrets
+  docker: tools/taskfiles/lib/docker.taskfile.yml
+  devenv: tools/taskfiles/lib/devenv.taskfile.yml
+  direnv: tools/taskfiles/lib/direnv.taskfile.yml
+
+  automation: tools/taskfiles/automation.taskfile.yml
+  
