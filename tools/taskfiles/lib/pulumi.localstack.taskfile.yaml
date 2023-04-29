@@ -9,24 +9,11 @@ tasks:
     cmds:
       - pulumilocal init
 
-  up:
-    dir: '{{.WORKING_DIR}}'
-    cmds:
-      - pulumilocal up
-
-  down:
-    dir: '{{.WORKING_DIR}}'
-    cmds:
-      - pulumi destroy
-      - pulumi stack rm
-
-  output:
-    dir: '{{.WORKING_DIR}}'
-    cmds:
-      - pulumi stack output bucket_name
-      - pulumi stack output bucket_endpoint
-
   bucket:list:
     dir: '{{.WORKING_DIR}}'
     cmds:
-      - awslocal ls $(pulumi stack output bucket_name)
+      - awslocal s3 ls {{.BUCKET_NAME}}
+      - open http://localhost:4566/{{.BUCKET_NAME}}/index.html
+    vars:
+      BUCKET_NAME: 
+        sh: pulumilocal stack output bucket_name

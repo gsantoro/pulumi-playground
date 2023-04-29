@@ -14,4 +14,8 @@ tasks:
   bucket:list:
     dir: '{{.WORKING_DIR}}'
     cmds:
-      - aws ls $(pulumi stack output bucket_name)
+      - aws s3 ls {{.BUCKET_NAME}}
+      - open http://localhost:4566/{{.BUCKET_NAME}}/index.html
+    vars:
+      BUCKET_NAME: 
+        sh: pulumi stack output bucket_name
