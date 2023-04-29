@@ -26,7 +26,7 @@ tasks:
       - pulumi stack output bucket_name
       - pulumi stack output bucket_endpoint
 
-  list:
+  bucket:list:
     dir: '{{.WORKING_DIR}}'
     cmds:
-      - gsutil ls $(pulumi stack output bucket_name)
+      - awslocal ls $(pulumi stack output bucket_name)

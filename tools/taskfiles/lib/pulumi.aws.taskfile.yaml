@@ -3,11 +3,6 @@
 version: '3'
 
 tasks:
-  # config
-  login:
-    cmds:
-      - gcloud auth application-default login
-  
   init:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
@@ -15,3 +10,8 @@ tasks:
       - pulumi config set aws:project {{.PROJECT_ID}}
       - pulumi config set aws:region us-west-2
       # https://blog.bringhurst.org/packaging-pulumi-with-poetry
+
+  bucket:list:
+    dir: '{{.WORKING_DIR}}'
+    cmds:
+      - aws ls $(pulumi stack output bucket_name)

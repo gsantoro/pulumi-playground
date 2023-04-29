@@ -18,8 +18,9 @@ includes:
   direnv: tools/taskfiles/lib/direnv.taskfile.yml
   poetry: tools/taskfiles/lib/poetry.taskfile.yml
   pulumi: tools/taskfiles/lib/pulumi.taskfile.yml
-  pulumi.gcp: tools/taskfiles/lib/pulumi.gcp.taskfile.yml
   
+  # taskfiles ending in .yaml are only modified locally. They need to be pushed back to gsantoro/automation repo
+  pulumi.gcp: tools/taskfiles/lib/pulumi.gcp.taskfile.yaml
   localstack: tools/taskfiles/lib/localstack.taskfile.yaml
   pulumi.aws: tools/taskfiles/lib/pulumi.aws.taskfile.yaml
   pulumi.localstack: tools/taskfiles/lib/pulumi.localstack.taskfile.yaml

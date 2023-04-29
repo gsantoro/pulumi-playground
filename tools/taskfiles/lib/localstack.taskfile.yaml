@@ -4,3 +4,7 @@ tasks:
   start:
     cmds: 
       - localstack start -d
+
+  stop:
+    cmds: 
+      - localstack stop
