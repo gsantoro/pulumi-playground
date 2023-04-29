@@ -20,6 +20,18 @@ tasks:
         vars:
           TASK_NAME: direnv
 
+      - task: download_from_github
+        vars:
+          TASK_NAME: pulumi
+
+      - task: download_from_github
+        vars:
+          TASK_NAME: pulumi.gcp
+
+      - task: download_from_github
+        vars:
+          TASK_NAME: poetry
+
   download_from_github:
     internal: true
     cmds:

@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  # config
+  login:
+    cmds:
+      - gcloud auth application-default login
+  
+  init:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - pulumi new aws-python --force
+      - pulumi config set aws:project {{.PROJECT_ID}}
+      # https://blog.bringhurst.org/packaging-pulumi-with-poetry

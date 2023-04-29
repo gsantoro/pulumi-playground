@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pulumi-playground"
+version = "0.1.0"
+description = ""
+authors = ["Giuseppe Santoro <giuseppe.santoro@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pulumi_playground"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+localstack = "^2.0.2"
+awscli-local = "^0.20"
+awscli = "^1.27.123"
+pulumi-local = "^0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

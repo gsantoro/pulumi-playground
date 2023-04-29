@@ -16,6 +16,13 @@ includes:
   docker: tools/taskfiles/lib/docker.taskfile.yml
   devenv: tools/taskfiles/lib/devenv.taskfile.yml
   direnv: tools/taskfiles/lib/direnv.taskfile.yml
+  poetry: tools/taskfiles/lib/poetry.taskfile.yml
+  pulumi: tools/taskfiles/lib/pulumi.taskfile.yml
+  pulumi.gcp: tools/taskfiles/lib/pulumi.gcp.taskfile.yml
+  
+  localstack: tools/taskfiles/lib/localstack.taskfile.yaml
+  pulumi.aws: tools/taskfiles/lib/pulumi.aws.taskfile.yaml
+  pulumi.localstack: tools/taskfiles/lib/pulumi.localstack.taskfile.yaml
 
   automation: tools/taskfiles/automation.taskfile.yml
   
